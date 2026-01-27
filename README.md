@@ -1,22 +1,39 @@
-# LGG Segmentation Dataset
+Brain Tumor MRI Segmentation Model
+Overview
+This project implements a deep learning–based Brain Tumor MRI Segmentation system using convolutional neural networks.
+The model is designed to automatically segment tumor regions from MRI scans, assisting in medical image analysis and decision support.
 
-This dataset contains brain MR images together with manual FLAIR abnormality segmentation masks.
-The images were obtained from The Cancer Imaging Archive (TCIA).
-They correspond to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma collection with at least fluid-attenuated inversion recovery (FLAIR) sequence and genomic cluster data available.
-Tumor genomic clusters and patient data is provided in `data.csv` file.
+This repository is intended as a research and demonstration project and is part of my AI/ML portfolio.
 
+Key Features
 
-All images are provided in `.tif` format with 3 channels per image.
-For 101 cases, 3 sequences are available, i.e. pre-contrast, FLAIR, post-contrast (in this order of channels).
-For 9 cases, post-contrast sequence is missing and for 6 cases, pre-contrast sequence is missing.
-Missing sequences are replaced with FLAIR sequence to make all images 3-channel.
-Masks are binary, 1-channel images.
-They segment FLAIR abnormality present in the FLAIR sequence (available for all cases).
+MRI image preprocessing and normalization
+Binary tumor segmentation
+PyTorch-based training and evaluation pipeline
+Visualization of predicted tumor masks vs ground truth
+Model & Approach
+Framework: PyTorch
+Architecture: CNN-based segmentation network (U-Net style)
+Loss Function: Dice / BCE-based loss
+Evaluation Metrics:
+Dice Score
+IoU (Jaccard Index)
+Accuracy
+Dataset
+Due to GitHub file size limitations, the dataset is not included in this repository.
 
+Brain MRI Tumor Dataset (Kaggle / Medical MRI datasets)
+You can download a compatible dataset from: 🔗 https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
 
-The dataset is organized into 110 folders named after case ID that contains information about source institution.
-Each folder contains MR images with the following naming convention:
+After downloading, organize the dataset as: ├── disease/ └── normal/
 
-`TCGA_<institution-code>_<patient-id>_<slice-number>.tif`
+Results
+Below are sample segmentation outputs produced by the model:
 
-Corresponding masks have a `_mask` suffix.
+Ground Truth vs Prediction
+Segmentation Result
+
+The model successfully highlights tumor regions with clear boundary separation.
+
+How to Run
+bash pip install -r requirements.txt python testing.py
