@@ -1,17 +1,16 @@
-Brain Tumor MRI Segmentation Model
-Overview
-This project implements a deep learning–based Brain Tumor MRI Segmentation system using convolutional neural networks.
-The model is designed to automatically segment tumor regions from MRI scans, assisting in medical image analysis and decision support.
+# Brain Tumor MRI Segmentation Model
+## Overview
+This project implements a deep learning–based Brain Tumor MRI Segmentation system using convolutional neural networks (CNNs). The model automatically segments tumor regions from MRI scans, supporting medical image analysis and decision-making.
 
-This repository is intended as a research and demonstration project and is part of my AI/ML portfolio.
+This repository is created for research and demonstration purposes and is part of my AI/ML portfolio.
 
-Key Features
+## Key Features
 
 MRI image preprocessing and normalization
 Binary tumor segmentation
 PyTorch-based training and evaluation pipeline
 Visualization of predicted tumor masks vs ground truth
-Model & Approach
+## Model & Approach
 Framework: PyTorch
 Architecture: CNN-based segmentation network (U-Net style)
 Loss Function: Dice / BCE-based loss
@@ -19,7 +18,7 @@ Evaluation Metrics:
 Dice Score
 IoU (Jaccard Index)
 Accuracy
-Dataset
+## Dataset
 Due to GitHub file size limitations, the dataset is not included in this repository.
 
 Brain MRI Tumor Dataset (Kaggle / Medical MRI datasets)
@@ -27,10 +26,12 @@ You can download a compatible dataset from: 🔗 https://www.kaggle.com/datasets
 
 After downloading, organize the dataset as: ├── disease/ └── normal/
 
-Results
+## Results
 Below are sample segmentation outputs produced by the model:
 
 Ground Truth vs Prediction
+<img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/155656f2-291d-4d49-bb14-7607a0b19882" />
+
 Segmentation Result
 
 The model successfully highlights tumor regions with clear boundary separation.
