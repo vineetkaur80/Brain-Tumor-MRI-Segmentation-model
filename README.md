@@ -30,8 +30,8 @@ After downloading, organize the dataset as: ├── disease/ └── normal/
 Below are sample segmentation outputs produced by the model:
 
 Ground Truth vs Prediction
-Segmentation Result (result/prediction_image.png)
 
+![Segmentation Result](results/prediction_image.png)
 The model successfully highlights tumor regions with clear boundary separation.
 
 How to Run
